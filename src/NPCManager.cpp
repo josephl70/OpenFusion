@@ -37,7 +37,7 @@ void NPCManager::init() {
 
     // load temporary mob dump
     try {
-        std::ifstream inFile("mobs.json"); // not in settings, since it's temp
+        std::ifstream inFile("data/mobs.json"); // not in settings, since it's temp
         nlohmann::json npcData;
 
         // read file into json
@@ -106,9 +106,9 @@ void NPCManager::updatePlayerNPCS(CNSocket* sock, PlayerView& view) {
 
             // remove from view
             view.viewableNPCs.erase(i++);
+        } else {
+            i++;
         }
-
-        ++i;
     }
 
     INITSTRUCT(sP_FE2CL_NPC_ENTER, enterData);
