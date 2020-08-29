@@ -8,6 +8,10 @@ tags
 CMakeFiles/
 CMakeCache.txt
 build/
-.vs/
+.vs/*
 .idea/
 *.db
+x64/*
+x86/*
+Release/*
+Debug/*
