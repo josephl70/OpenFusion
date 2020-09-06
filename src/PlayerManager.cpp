@@ -63,7 +63,7 @@ void PlayerManager::removePlayer(CNSocket* key) {
         otherSock->sendPacket((void*)&exitPacket, P_FE2CL_PC_EXIT, sizeof(sP_FE2CL_PC_EXIT));
     }
 
-    std::cout << U16toU8(cachedView.plr->PCStyle.szFirstName) << U16toU8(cachedView.plr->PCStyle.szLastName) << " has left!" << std::endl;
+    std::cout << U16toU8(cachedView.plr->PCStyle.szFirstName) << " " << U16toU8(cachedView.plr->PCStyle.szLastName) << " has left!" << std::endl;
     std::cout << players.size() << " players" << std::endl;
 
     delete cachedView.plr;
@@ -685,5 +685,29 @@ WarpLocation PlayerManager::getRespawnPoint(Player *plr) {
     }
 
     return best;
+}
+bool PlayerManager::isAccountInUse(int accountId) {
+    std::map<CNSocket*, PlayerView>::iterator it;
+    for (it = PlayerManager::players.begin(); it != PlayerManager::players.end(); it++)
+    {
+        if (it->second.plr->accountId == accountId)
+            return true;
+    }
+    return false;
+}
+
+void PlayerManager::exitDuplicate(int accountId) {
+    std::map<CNSocket*, PlayerView>::iterator it;
+    for (it = PlayerManager::players.begin(); it != PlayerManager::players.end(); it++)
+    {
+        if (it->second.plr->accountId == accountId)
+        {
+            CNSocket* sock = it->first;
+            INITSTRUCT(sP_FE2CL_REP_PC_EXIT_DUPLICATE, resp);
+            resp.iErrorCode = 0;
+            sock->sendPacket((void*)&resp, P_FE2CL_REP_PC_EXIT_DUPLICATE, sizeof(sP_FE2CL_REP_PC_EXIT_DUPLICATE));
+            sock->kill();
+        }
+    }
 }
 #pragma endregion
