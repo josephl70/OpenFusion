@@ -30,10 +30,7 @@
     <ClCompile Include="src\contrib\bcrypt\crypt_blowfish.c" />
     <ClCompile Include="src\contrib\bcrypt\crypt_gensalt.c" />
     <ClCompile Include="src\contrib\bcrypt\wrapper.c" />
-    <ClCompile Include="src\contrib\sqlite\shell.c" />
     <ClCompile Include="src\contrib\sqlite\sqlite3.c" />
-    <ClCompile Include="src\contrib\sqlite\sqlite3pp.cpp" />
-    <ClCompile Include="src\contrib\sqlite\sqlite3ppext.cpp" />
     <ClCompile Include="src\Database.cpp" />
     <ClCompile Include="src\Defines.cpp" />
     <ClCompile Include="src\ItemManager.cpp" />
@@ -44,6 +41,7 @@
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\PlayerManager.cpp" />
     <ClCompile Include="src\settings.cpp" />
+    <ClCompile Include="src\TransportManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ChatManager.hpp" />
@@ -66,10 +64,15 @@
     <ClInclude Include="src\contrib\sqlite\sqlite3ext.h" />
     <ClInclude Include="src\contrib\sqlite\sqlite3pp.h" />
     <ClInclude Include="src\contrib\sqlite\sqlite3ppext.h" />
+    <ClInclude Include="src\contrib\sqlite\sqlite_orm.h" />
     <ClInclude Include="src\Database.hpp" />
     <ClInclude Include="src\Defines.hpp" />
     <ClInclude Include="src\INIReader.hpp" />
     <ClInclude Include="src\ItemManager.hpp" />
+    <ClInclude Include="src\mingw\mingw.invoke.h" />
+    <ClInclude Include="src\mingw\mingw.mutex.h" />
+    <ClInclude Include="src\mingw\mingw.shared_mutex.h" />
+    <ClInclude Include="src\mingw\mingw.thread.h" />
     <ClInclude Include="src\MissionManager.hpp" />
     <ClInclude Include="src\NanoManager.hpp" />
     <ClInclude Include="src\NPC.hpp" />
@@ -79,6 +82,7 @@
     <ClInclude Include="src\settings.hpp" />
     <ClInclude Include="src\structs\0104.hpp" />
     <ClInclude Include="src\structs\0728.hpp" />
+    <ClInclude Include="src\TransportManager.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\contrib\bcrypt\x86.S" />

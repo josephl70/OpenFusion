@@ -99,6 +99,9 @@
     <ClCompile Include="src\contrib\sqlite\sqlite3ppext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\TransportManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ChatManager.hpp">
@@ -198,6 +201,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\contrib\sqlite\sqlite3ppext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\contrib\sqlite\sqlite_orm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TransportManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mingw\mingw.invoke.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mingw\mingw.mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mingw\mingw.shared_mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mingw\mingw.thread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
