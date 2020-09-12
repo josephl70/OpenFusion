@@ -87,19 +87,13 @@
     <ClCompile Include="src\contrib\bcrypt\wrapper.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\contrib\sqlite\shell.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\contrib\sqlite\sqlite3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\contrib\sqlite\sqlite3pp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\contrib\sqlite\sqlite3ppext.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\TransportManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TableData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -219,6 +213,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\mingw\mingw.thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TableData.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
